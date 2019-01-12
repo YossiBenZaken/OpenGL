@@ -2,7 +2,7 @@
 #include <stdio.h>
 int correctArr[3][5][5] = { {{1,0,0,0,1},{1,1,0,1,1},{0,1,0,1,0},{0,1,1,1,0},{0,0,1,0,0}},
 {{1,0,0,0,1},{1,1,0,1,1},{0,1,1,1,0},{0,1,0,1,0},{0,1,1,1,0} },
-{{0,1,0,0,0},{0,1,0,1,1},{0,0,1,0,0},{1,1,1,0,0},{1,1,1,1,0}} };//שלבים
+{{0,1,0,0,0},{0,1,0,1,1},{0,0,1,0,0},{1,1,1,0,0},{1,1,1,1,0}} };
 int gameArr[5][5] = { 0 }, win,level=0,time;
 void Reshape(int width, int height)
 {
@@ -12,7 +12,7 @@ void Reshape(int width, int height)
 	gluOrtho2D(0,500, 500,0);
 	glMatrixMode(GL_MODELVIEW);
 }
-void check()//בדיקה אם המערכים שווים
+void check()
 {
 	int i, j,h,m,s;
 	for (i = 0; i < 5; i++)
@@ -32,7 +32,7 @@ void check()//בדיקה אם המערכים שווים
 		printf("You Win! You do this griddler with %d:%d:%d\n",h,m,s);
 	}
 }
-void Lines() {//קווים על הלוח
+void Lines() {
 	int i;
 	glColor3f(0, 0, 0);
 	glLineWidth(2);
@@ -50,7 +50,7 @@ void Lines() {//קווים על הלוח
 	glEnd();
 	glFlush();
 }
-void timer(int a)//טיימר של שניות
+void timer(int a)
 {
 	time++;
 	glutTimerFunc(1000, timer, 0);
@@ -129,7 +129,7 @@ int main(int argc, char *argv[])
 	glutInitWindowSize(500, 500);
 	glutInitWindowPosition(700, 100);
 	glutInitDisplayMode(GLUT_RGB);
-	glutCreateWindow("Eden Biton");
+	glutCreateWindow("Griddler Game");
 	glutReshapeFunc(Reshape);
 	glutDisplayFunc(Draw);
 	glutMouseFunc(Mouse);
