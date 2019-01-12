@@ -137,7 +137,7 @@ int main(int argc, char *argv[])
 	glutInitWindowSize(300, 300);
 	glutInitWindowPosition(100, 100);
 	glutInitDisplayMode(GLUT_RGB);
-	glutCreateWindow("Yossi Ben Zaken");
+	glutCreateWindow("XO");
 	glutReshapeFunc(Reshape);
 	glutDisplayFunc(Draw);
 	glutMouseFunc(MouseFunc);
