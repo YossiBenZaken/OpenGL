@@ -289,7 +289,7 @@ int main(int argc, char *argv[])
 	glutInit(&argc, argv);
 	glutInitWindowSize(700, 600);
 	glutInitDisplayMode(GLUT_RGB);
-	glutCreateWindow(" Demo");
+	glutCreateWindow("4inRow");
 	glutCreateMenu(main_menu);
 	glutAddMenuEntry("Quit", 1);
 	glutAddMenuEntry("New Game", 2);
